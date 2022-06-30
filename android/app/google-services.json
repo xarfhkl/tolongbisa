@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "538696877177",
+    "project_id": "tolongbisa",
+    "storage_bucket": "tolongbisa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538696877177:android:0ec0715a1b0b54e01cc0a8",
+        "android_client_info": {
+          "package_name": "com.xarfhl.tolongbisa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538696877177-7kuqa5nuegf6lhfni9aqi7mhtqi2s2ln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xarfhl.tolongbisa",
+            "certificate_hash": "9d7c1041011899c3e9ae4b62ae85d3caae309a78"
+          }
+        },
+        {
+          "client_id": "538696877177-pjvauldp1pkbh22ps6k03t782m6rg8e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu6XjPrzvIl2mbtSX2OxyYa1ALIUTuW-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538696877177-pjvauldp1pkbh22ps6k03t782m6rg8e2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
