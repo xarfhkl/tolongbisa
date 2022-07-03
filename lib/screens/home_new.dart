@@ -54,14 +54,41 @@ class _MenuUtamaState extends State<MenuUtama> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Icon(Icons.account_circle_sharp),
-                          Text("${loggedInUser.firstName}",
-                              style: TextStyle(color: Colors.white)),
+                          Text("${loggedInUser.firstName}",style: TextStyle(color: Colors.white)),
                         ],
                       ),
                     ),
                   ),
                 ),
               )
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(this.context,
+              //         MaterialPageRoute(builder: (context) => MenuUtama()));
+              //   },
+              //   child: Row(
+              //     mainAxisSize: MainAxisSize.min,
+              //     children: [
+              //       Icon(
+              //         Icons.account_circle_sharp,
+              //         size: 24.0,
+              //       ),
+              //       Text("${loggedInUser.firstName}"),
+              //       SizedBox(
+              //         width: 5,
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // IconButton(
+              //     icon: Icon(Icons.account_circle_sharp),
+              //     onPressed: () {}),
+              // Container(
+              //     child: Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: Text("${loggedInUser.firstName}",
+              //       style: TextStyle(color: Colors.red)),
+              // ))
             ],
           ),
           body: Container(

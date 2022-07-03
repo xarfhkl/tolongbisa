@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tolongbisa/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:tolongbisa/welcome/welcome_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

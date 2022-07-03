@@ -12,22 +12,14 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // form key
   final _formKey = GlobalKey<FormState>();
-
-  // editing controller
   final TextEditingController emailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
-
-  // firebase
   final _auth = FirebaseAuth.instance;
-
-  // string for displaying the error Message
   String? errorMessage;
 
   @override
   Widget build(BuildContext context) {
-    //email field
     final emailField = TextFormField(
         autofocus: false,
         controller: emailController,
@@ -36,7 +28,6 @@ class _LoginScreenState extends State<LoginScreen> {
           if (value!.isEmpty) {
             return ("Please Enter Your Email");
           }
-          // reg expression for email validation
           if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
               .hasMatch(value)) {
             return ("Please Enter a valid email");
@@ -55,8 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
             borderRadius: BorderRadius.circular(10),
           ),
         ));
-
-    //password field
     final passwordField = TextFormField(
         autofocus: false,
         controller: passwordController,
@@ -148,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   fontSize: 15),
                             ),
                           )
-                        ])
+                        ]),
                   ],
                 ),
               ),
@@ -168,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
             .then((uid) => {
                   Fluttertoast.showToast(msg: "Login Successful"),
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen())),
+                      MaterialPageRoute(builder: (context) => MenuUtama())),
                 });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {

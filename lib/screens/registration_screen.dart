@@ -16,12 +16,11 @@ class RegistrationScreen extends StatefulWidget {
 class _RegistrationScreenState extends State<RegistrationScreen> {
   final _auth = FirebaseAuth.instance;
 
-  // string for displaying the error Message
   String? errorMessage;
-
 
   // our form key
   final _formKey = GlobalKey<FormState>();
+
   // editing Controller
   final firstNameEditingController = new TextEditingController();
   final secondNameEditingController = new TextEditingController();
@@ -31,7 +30,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //first name field
     final firstNameField = TextFormField(
         autofocus: false,
         controller: firstNameEditingController,
@@ -59,7 +57,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ));
 
-    //second name field
     final secondNameField = TextFormField(
         autofocus: false,
         controller: secondNameEditingController,
@@ -83,7 +80,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ));
 
-    //email field
     final emailField = TextFormField(
         autofocus: false,
         controller: emailEditingController,
@@ -112,7 +108,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ));
 
-    //password field
     final passwordField = TextFormField(
         autofocus: false,
         controller: passwordEditingController,
@@ -139,7 +134,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ));
 
-    //confirm password field
     final confirmPasswordField = TextFormField(
         autofocus: false,
         controller: confirmPasswordEditingController,
@@ -164,7 +158,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
         ));
 
-    //signup button
     final signUpButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
@@ -236,8 +229,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          LoginScreen()));
+                                      builder: (context) => LoginScreen()));
                             },
                             child: Text(
                               "Login",
@@ -257,6 +249,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       ),
     );
   }
+
   void signUp(String email, String password) async {
     if (_formKey.currentState!.validate()) {
       try {
@@ -294,6 +287,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       }
     }
   }
+
   postDetailsToFirestore() async {
     // calling our firestore
     // calling our user model
@@ -318,7 +312,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
     Navigator.pushAndRemoveUntil(
         (context),
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-            (route) => false);
+        MaterialPageRoute(builder: (context) => MenuUtama()),
+        (route) => false);
   }
 }
